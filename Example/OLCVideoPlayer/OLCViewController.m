@@ -22,18 +22,24 @@
     [super viewDidLoad];
     
     [self.vidplayer setDelegate:self];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationClosing:) name:UIApplicationWillResignActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationOpening:) name:UIApplicationWillEnterForegroundNotification object:nil];
-    
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationClosing:) name:
+     UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationOpening:) name:
+     UIApplicationWillEnterForegroundNotification object:nil];
+    
     [self loadVideosToPlayer];
     
     [self.vidplayer continusPlay:YES];
-    [self.vidplayer shuffleVideos:YES];
+    [self.vidplayer shuffleVideos:NO];
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - OLCVideoPlayer Init
@@ -41,7 +47,6 @@
 - (void) loadVideosToPlayer
 {
     NSMutableArray *videos = [[NSMutableArray alloc] init];
-    
     NSMutableDictionary *video = nil;
     
     //Video 1
@@ -62,6 +67,13 @@
     NSURL *fileURL3 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"SampleVideo_3" ofType:@"mp4"]];
     video = [[NSMutableDictionary alloc] init];
     [video setObject:fileURL3 forKey:OLCPlayerVideoURL];
+    [video setValue:@0 forKey:OLCPlayerPlayTime];
+    [videos addObject:video];
+    
+    //Video 4
+    NSURL *web = [NSURL URLWithString:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
+    video = [[NSMutableDictionary alloc] init];
+    [video setObject:web forKey:OLCPlayerVideoURL];
     [video setValue:@0 forKey:OLCPlayerPlayTime];
     [videos addObject:video];
     

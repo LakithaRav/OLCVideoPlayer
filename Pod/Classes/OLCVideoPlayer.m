@@ -264,7 +264,7 @@ NSString *const OLCPlayerPlayTime = @"OLCPlayerPlayTime";
     canPlayContinus = YES;
     doLoop = NO;
     playIndex = 0;
-    volumeLevel = 0.0f;
+    volumeLevel = 1.0f;
     
     self.isPlaying = NO;
     
