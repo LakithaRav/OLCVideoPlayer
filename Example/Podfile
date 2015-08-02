@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'OLCVideoPlayer_Example', :exclusive => true do
+  pod "OLCVideoPlayer", :path => "../"
+end
+
+target 'OLCVideoPlayer_Tests', :exclusive => true do
+  pod "OLCVideoPlayer", :path => "../"
+
+  pod 'FBSnapshotTestCase'
+end
