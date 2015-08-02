@@ -1,0 +1,6 @@
+framework module OLCVideoPlayer {
+  umbrella header "Pods-OLCVideoPlayer_Tests-OLCVideoPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

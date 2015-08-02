@@ -1,4 +1,4 @@
-Pods/
+
 
 # Mac OS X
 *.DS_Store
@@ -14,7 +14,6 @@ xcuserdata/
 *.lock
 
 # Pods - for those of you who use CocoaPods
-Pods
 
 # Generated files
 *.o
