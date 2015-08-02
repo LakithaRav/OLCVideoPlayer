@@ -29,7 +29,7 @@ pod "OLCVideoPlayer"
 
 ## Author
 
-Lakitha Sam, lakitha@fidenz.com
+Lakitha Sam, lakitharav@gmail.com
 
 ## License
 
