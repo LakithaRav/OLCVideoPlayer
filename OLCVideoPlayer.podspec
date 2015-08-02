@@ -9,22 +9,22 @@
 
 Pod::Spec.new do |s|
   s.name             = "OLCVideoPlayer"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of OLCVideoPlayer."
+  s.version          = "1.0.0"
+  s.summary          = "Objective-C custom video player"
   s.description      = <<-DESC
-                       An optional longer description of OLCVideoPlayer
+OLCVideoPlayer is a custom video player that can do so much more than what the default MediaPlayer can do. The motivation behind this project was to make a video player that we have full controll over, so it has the ability to change play a collection of videos, change volume level, play in background, set time limits per video, smooth playback and so much more !
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/OLCVideoPlayer"
+Full tutorail: https://onelonecoder.wordpress.com/2015/08/02/objective-c-custom-video-player/
+DESC
+
+  s.homepage         = "https://github.com/LakithaRav/OLCVideoPlayer"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Lakitha Sam" => "lakitha@fidenz.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/OLCVideoPlayer.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Lakitha Sam" => "lakitharav@gmail.com" }
+  s.source           = { :git => "https://github.com/LakithaRav/OLCVideoPlayer.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/LakySam'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
